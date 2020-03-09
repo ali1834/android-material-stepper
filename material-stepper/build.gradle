@@ -51,7 +51,7 @@ dependencies {
         exclude group: 'commons-logging', module: 'commons-logging'
         exclude group: 'org.apache.httpcomponents', module: 'httpclient'
     }
-    testImplementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+    testImplementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     testImplementation "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
     testImplementation "com.nhaarman:mockito-kotlin:$mockitoKotlinVersion"
 }

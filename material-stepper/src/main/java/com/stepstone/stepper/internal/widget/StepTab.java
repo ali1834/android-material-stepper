@@ -84,6 +84,9 @@ public class StepTab extends RelativeLayout {
     final ImageView mStepIconBackground;
 
     @VisibleForTesting
+    final ImageView mStepIcon;
+
+    @VisibleForTesting
     CharSequence mSubtitle;
 
     /**
@@ -132,6 +135,7 @@ public class StepTab extends RelativeLayout {
         mStepNumberTextView = (TextView) findViewById(R.id.ms_stepNumber);
         mStepDoneIndicator = (ImageView) findViewById(R.id.ms_stepDoneIndicator);
         mStepIconBackground = (ImageView) findViewById(R.id.ms_stepIconBackground);
+        mStepIcon = (ImageView)findViewById(R.id.ms_stepIcon);
         mStepDivider = findViewById(R.id.ms_stepDivider);
         mStepTitleTextView = (TextView) findViewById(R.id.ms_stepTitle);
         mStepSubtitleTextView = (TextView) findViewById(R.id.ms_stepSubtitle);
@@ -184,6 +188,10 @@ public class StepTab extends RelativeLayout {
      */
     public void setStepTitle(CharSequence title) {
         mStepTitleTextView.setText(title);
+    }
+
+    public void setStepIcon(int img){
+        mStepIcon.setImageResource(img);
     }
 
     /**
@@ -351,6 +359,8 @@ public class StepTab extends RelativeLayout {
             mStepTitleTextView.setAlpha(ALPHA_ACTIVE_STEP_TITLE);
             super.changeToDone();
         }
+
+
     }
 
     @VisibleForTesting

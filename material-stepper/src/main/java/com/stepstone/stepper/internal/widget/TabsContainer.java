@@ -170,6 +170,7 @@ public class TabsContainer extends FrameLayout {
         view.setStepNumber(String.valueOf(position + 1));
         view.toggleDividerVisibility(!isLastPosition(position));
         view.setStepTitle(stepViewModel.getTitle());
+        view.setStepIcon(stepViewModel.getIcon());
         view.setStepSubtitle(stepViewModel.getSubtitle());
         view.setSelectedColor(mSelectedColor);
         view.setUnselectedColor(mUnselectedColor);

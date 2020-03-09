@@ -41,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
     implementation project(':material-stepper')
     implementation "com.android.support:appcompat-v7:$androidSupportLibraryVersion"

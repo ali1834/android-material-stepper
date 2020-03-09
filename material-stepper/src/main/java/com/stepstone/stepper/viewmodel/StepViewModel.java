@@ -22,11 +22,12 @@ public class StepViewModel {
      */
     public static final int NULL_DRAWABLE = -1;
 
-    private StepViewModel(@Nullable CharSequence title, @Nullable CharSequence subtitle,
+    private StepViewModel(@Nullable CharSequence title,@Nullable int icon, @Nullable CharSequence subtitle,
                           @Nullable CharSequence endButtonLabel, @Nullable CharSequence backButtonLabel,
                           @DrawableRes int nextButtonEndDrawableResId, @DrawableRes int backButtonStartDrawableResId,
                           boolean endButtonVisible, boolean backButtonVisible) {
         mTitle = title;
+        mIcon  = icon;
         mSubtitle = subtitle;
         mEndButtonLabel = endButtonLabel;
         mBackButtonLabel = backButtonLabel;
@@ -41,6 +42,9 @@ public class StepViewModel {
      */
     @Nullable
     private final CharSequence mTitle;
+
+    @Nullable
+    private final int mIcon;
 
     /**
      * The optional displayable subtitle of the step.
@@ -100,6 +104,11 @@ public class StepViewModel {
     }
 
     @Nullable
+    public int getIcon(){
+        return mIcon;
+    }
+
+    @Nullable
     public CharSequence getSubtitle() {
         return mSubtitle;
     }
@@ -140,11 +149,16 @@ public class StepViewModel {
         @Nullable
         private CharSequence mTitle;
 
+
+
         @Nullable
         private CharSequence mSubtitle;
 
         @Nullable
         private CharSequence mEndButtonLabel;
+
+        @Nullable
+        private int mIcon;
 
         @Nullable
         private CharSequence mBackButtonLabel;
@@ -176,6 +190,11 @@ public class StepViewModel {
          */
         public Builder setTitle(@StringRes int titleId) {
             mTitle = mContext.getString(titleId);
+            return this;
+        }
+
+        public Builder setIcon(@StringRes int icon){
+            mIcon = icon;
             return this;
         }
 
@@ -306,7 +325,7 @@ public class StepViewModel {
          * @return created StepViewModel
          */
         public StepViewModel create() {
-            return new StepViewModel(mTitle, mSubtitle,
+            return new StepViewModel(mTitle,mIcon , mSubtitle,
                     mEndButtonLabel, mBackButtonLabel,
                     mNextButtonEndDrawableResId, mBackButtonStartDrawableResId,
                     mEndButtonVisible, mBackButtonVisible);
