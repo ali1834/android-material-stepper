@@ -1,6 +1,7 @@
 package com.stepstone.stepper.viewmodel;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,7 +23,7 @@ public class StepViewModel {
      */
     public static final int NULL_DRAWABLE = -1;
 
-    private StepViewModel(@Nullable CharSequence title,@Nullable int icon, @Nullable CharSequence subtitle,
+    private StepViewModel(@Nullable CharSequence title,@Nullable Drawable icon, @Nullable CharSequence subtitle,
                           @Nullable CharSequence endButtonLabel, @Nullable CharSequence backButtonLabel,
                           @DrawableRes int nextButtonEndDrawableResId, @DrawableRes int backButtonStartDrawableResId,
                           boolean endButtonVisible, boolean backButtonVisible) {
@@ -44,7 +45,7 @@ public class StepViewModel {
     private final CharSequence mTitle;
 
     @Nullable
-    private final int mIcon;
+    private final Drawable mIcon;
 
     /**
      * The optional displayable subtitle of the step.
@@ -104,7 +105,7 @@ public class StepViewModel {
     }
 
     @Nullable
-    public int getIcon(){
+    public Drawable getIcon(){
         return mIcon;
     }
 
@@ -158,7 +159,7 @@ public class StepViewModel {
         private CharSequence mEndButtonLabel;
 
         @Nullable
-        private int mIcon;
+        private Drawable mIcon;
 
         @Nullable
         private CharSequence mBackButtonLabel;
@@ -193,7 +194,7 @@ public class StepViewModel {
             return this;
         }
 
-        public Builder setIcon(@StringRes int icon){
+        public Builder setIcon(Drawable icon){
             mIcon = icon;
             return this;
         }

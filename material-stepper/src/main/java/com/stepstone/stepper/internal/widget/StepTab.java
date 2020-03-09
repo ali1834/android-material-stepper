@@ -190,8 +190,8 @@ public class StepTab extends RelativeLayout {
         mStepTitleTextView.setText(title);
     }
 
-    public void setStepIcon(int img){
-        mStepIcon.setImageResource(img);
+    public void setStepIcon(Drawable img){
+        mStepIcon.setImageDrawable(img);
     }
 
     /**
