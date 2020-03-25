@@ -344,7 +344,7 @@ public class StepTab extends RelativeLayout {
             mStepTitleTextView.setTextColor(mTitleColor);
             mStepTitleTextView.setAlpha(ALPHA_INACTIVE_STEP_TITLE);
             mStepSubtitleTextView.setTextColor(mSubtitleColor);
-//            mStepDivider.setBackgroundColor(Color.GRAY);
+            mStepDivider.setBackgroundColor(Color.GRAY);
             super.changeToInactiveNumber();
         }
 
@@ -352,7 +352,7 @@ public class StepTab extends RelativeLayout {
         protected void changeToActiveNumber() {
             mStepIconBackground.setColorFilter(mSelectedColor, PorterDuff.Mode.SRC_IN);
             mStepTitleTextView.setAlpha(ALPHA_ACTIVE_STEP_TITLE);
-//            mStepDivider.setBackgroundColor(Color.BLUE);
+            mStepDivider.setBackgroundColor(Color.GRAY);
             super.changeToActiveNumber();
         }
 
@@ -360,7 +360,7 @@ public class StepTab extends RelativeLayout {
         protected void changeToDone() {
             mStepIconBackground.setColorFilter(mSelectedColor);
             mStepTitleTextView.setAlpha(ALPHA_ACTIVE_STEP_TITLE);
-//            mStepDivider.setBackgroundColor(Color.BLUE);
+            mStepDivider.setBackgroundColor(Color.BLUE);
             super.changeToDone();
         }
 
@@ -387,7 +387,7 @@ public class StepTab extends RelativeLayout {
             mStepNumberTextView.setVisibility(VISIBLE);
             mStepIconBackground.setColorFilter(mUnselectedColor, PorterDuff.Mode.SRC_IN);
             mStepTitleTextView.setAlpha(ALPHA_INACTIVE_STEP_TITLE);
-            mStepDivider.setBackgroundColor(Color.GRAY);
+//            mStepDivider.setBackgroundColor(Color.GRAY);
             super.changeToInactiveNumber();
         }
 
@@ -395,7 +395,6 @@ public class StepTab extends RelativeLayout {
         protected void changeToActiveNumber() {
             mStepDoneIndicator.setVisibility(GONE);
             mStepNumberTextView.setVisibility(VISIBLE);
-            mStepDivider.setBackgroundColor(Color.BLUE);
             super.changeToActiveNumber();
         }
 
