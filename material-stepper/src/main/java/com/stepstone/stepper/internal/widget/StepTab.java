@@ -17,6 +17,7 @@ limitations under the License.
 package com.stepstone.stepper.internal.widget;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Animatable;
@@ -55,9 +56,9 @@ public class StepTab extends RelativeLayout {
 
     private static final float ALPHA_TRANSPARENT = 0.0f;
 
-    private static final float ALPHA_INACTIVE_STEP_TITLE = 0.54f;
+    private static final float ALPHA_INACTIVE_STEP_TITLE = 0.44f;
 
-    private static final float ALPHA_ACTIVE_STEP_TITLE = 0.87f;
+    private static final float ALPHA_ACTIVE_STEP_TITLE = 0.99f;
 
     private static final float ALPHA_OPAQUE = 1.0f;
 
@@ -343,6 +344,7 @@ public class StepTab extends RelativeLayout {
             mStepTitleTextView.setTextColor(mTitleColor);
             mStepTitleTextView.setAlpha(ALPHA_INACTIVE_STEP_TITLE);
             mStepSubtitleTextView.setTextColor(mSubtitleColor);
+            mStepDivider.setBackgroundColor(Color.GRAY);
             super.changeToInactiveNumber();
         }
 
@@ -350,6 +352,7 @@ public class StepTab extends RelativeLayout {
         protected void changeToActiveNumber() {
             mStepIconBackground.setColorFilter(mSelectedColor, PorterDuff.Mode.SRC_IN);
             mStepTitleTextView.setAlpha(ALPHA_ACTIVE_STEP_TITLE);
+            mStepDivider.setBackgroundColor(Color.BLUE);
             super.changeToActiveNumber();
         }
 
@@ -357,6 +360,7 @@ public class StepTab extends RelativeLayout {
         protected void changeToDone() {
             mStepIconBackground.setColorFilter(mSelectedColor);
             mStepTitleTextView.setAlpha(ALPHA_ACTIVE_STEP_TITLE);
+            mStepDivider.setBackgroundColor(Color.BLUE);
             super.changeToDone();
         }
 
