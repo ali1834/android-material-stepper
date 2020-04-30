@@ -17,6 +17,7 @@ limitations under the License.
 package com.stepstone.stepper.internal.widget;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Animatable;
@@ -169,6 +170,9 @@ public class StepTab extends RelativeLayout {
     public void updateState(@Nullable final VerificationError error, final boolean done, final boolean current, boolean showErrorMessageEnabled) {
         // FIXME: 05/03/2017 stop tabs from changing positions due to changing font type (does not happen e.g. on API 16, investigate further)
         mStepTitleTextView.setTypeface(current ? mBoldTypeface : mNormalTypeface);
+        if (current){
+            mStepTitleTextView.setTextColor(Color.RED);
+        }
 
         if (error != null) {
             mCurrentState.changeToWarning(showErrorMessageEnabled ? error.getErrorMessage() : null);
