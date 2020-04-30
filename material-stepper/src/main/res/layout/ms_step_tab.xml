@@ -75,6 +75,7 @@
         android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/ms_stepTextContainer"
         android:layout_toRightOf="@+id/ms_stepTextContainer"
+        android:background="@drawable/ms_vertical_tab_divider"
         tools:style="@style/MSStepTabDivider" />
 
 </merge>
