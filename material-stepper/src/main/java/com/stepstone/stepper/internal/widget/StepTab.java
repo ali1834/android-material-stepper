@@ -172,6 +172,8 @@ public class StepTab extends RelativeLayout {
         mStepTitleTextView.setTypeface(current ? mBoldTypeface : mNormalTypeface);
         if (current){
             mStepTitleTextView.setTextColor(Color.RED);
+        }else{
+            mStepTitleTextView.setTextColor(Color.BLACK);
         }
 
         if (error != null) {
